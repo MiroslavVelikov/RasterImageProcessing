@@ -7,37 +7,18 @@
 // Make it work even if there is random comented text there
 
 int main() {
-	/*std::string img1, img2;
+	std::string img1, img2, img3, img4;
 	img1 = "./images/J.pbm";
 	img2 = "./images/J_OneLiner.pbm";
-	
-	std::vector<std::string> vec{ img1, img2 };
+	img3 = "./images/FEEP.pgm";
+	img4 = "./images/Colors.ppm";
+
+	std::vector<std::string> vec{ img1 };// , img2, img3, img4 };
 
 	Session session(vec);
-	session.print();*/
-	
-	std::ifstream imageStream("./images/J.pbm");
-	Image* img = ImageFactory::getFactory().createImage("pbm", "J", imageStream);
-	img->print();
-	
-	PortableBitMap* pbm = dynamic_cast<PortableBitMap*>(img);
-	
-	delete img;
-	/*std::string text = "Miro.jpg";
-	std::cout << text.substr(text.size() - 3);
-	*/
-	//std::string input, name;
-	//std::cin >> input >> name;
-	//std::ifstream imageStream("./images/J.pbm");
+	session.print();
+	session.crop(2, 2, 16, 5);
+	session.print();
 
-	//if (!imageStream.is_open()) {
-	//    std::cout << "Error!" << std::endl;
-	//    return -1;
-	//}
-
-	//Image* image = ImageFactory::getFactory().createImage(input, name, imageStream);//std::cin);
-	//image->print();
-	//delete image;
-	//image = nullptr;
-	//return 0;
+	return 0;
 }

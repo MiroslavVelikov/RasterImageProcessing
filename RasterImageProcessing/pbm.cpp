@@ -45,6 +45,10 @@ void PortableBitMap::print() const {
 	}
 }
 
+void* PortableBitMap::getPixels() {
+	return &pixels;
+}
+
 // PMBCreator
 // ==============================================================
 

@@ -59,6 +59,11 @@ void PortablePixMap::print() const {
 	}
 }
 
+void* PortablePixMap::getPixels() {
+	return &pixels;
+}
+
+
 // PPMCreator
 // ==============================================
 

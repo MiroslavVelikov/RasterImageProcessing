@@ -57,6 +57,11 @@ void PortableGrayMap::print() const {
 	}
 }
 
+void* PortableGrayMap::getPixels() {
+	return &pixels;
+}
+
+
 // PGMCreator
 // ==============================================
 

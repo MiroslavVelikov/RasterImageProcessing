@@ -28,6 +28,15 @@ void Image::setHeight(size_t value) {
 
 	height = value;
 }
+// invalid_argument
+
+size_t Image::getWidth() const {
+	return width;
+}
+
+size_t Image::getHeight() const {
+	return height;
+}
 
 void Image::clear() {
 	this->width = this->height = 0;

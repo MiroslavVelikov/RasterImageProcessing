@@ -11,6 +11,8 @@ public:
 	std::string getInfo() const override;
 	void print() const override;
 
+	void* getPixels() override;
+
 private:
 	void setMaxValue(size_t value);
 	void setPixels(const std::vector<std::vector<rgb>>& value);

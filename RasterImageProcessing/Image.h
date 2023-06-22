@@ -3,7 +3,12 @@
 #include <iostream> // cout
 #include <stdexcept> // invalid_argument
 
+class Session;
+
 class Image {
+private:
+	friend Session;
+
 public:
 	Image(const std::string& name, const std::string& extensionType, size_t width, size_t height);
 
@@ -12,7 +17,12 @@ public:
 	virtual void printInfo() const = 0;
 	virtual std::string getInfo() const = 0;
 
-	//virtual std::vector<T> getPixels() const = 0;
+	const std::string& getType() const { return extensionType; };
+
+	virtual void* getPixels() = 0;
+
+	size_t getWidth() const;
+	size_t getHeight() const;
 
 protected:
 	virtual void clear();

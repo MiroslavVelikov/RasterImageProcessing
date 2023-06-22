@@ -9,6 +9,8 @@ public:
 	void printInfo() const override;
 	std::string getInfo() const override;
 	void print() const override;
+	
+	void* getPixels() override;
 
 private:
 	void setMaxValue(size_t value);

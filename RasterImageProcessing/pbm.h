@@ -9,7 +9,8 @@ public:
 	std::string getInfo() const override;
 	void print() const override;
 
-	std::vector<std::vector<bool>>& getPixels() { return pixels; };
+	void* getPixels() override;
+	//std::vector<std::vector<bool>>& getPixels() { return pixels; };
 
 private:
 	void setPixels(const std::vector<std::vector<bool>>& value);
