@@ -12,6 +12,7 @@ public:
 	void print() const override;
 
 	void* getPixels() override;
+	size_t maxValueColor() const override { return maxValue; };
 
 private:
 	void setMaxValue(size_t value);

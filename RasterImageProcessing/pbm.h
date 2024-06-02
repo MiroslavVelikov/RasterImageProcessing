@@ -10,6 +10,8 @@ public:
 	void print() const override;
 
 	void* getPixels() override;
+	size_t maxValueColor() const override { return BLACK_VALUE; };
+
 	//std::vector<std::vector<bool>>& getPixels() { return pixels; };
 
 private:

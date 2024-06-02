@@ -6,7 +6,7 @@
 const rgb PortablePixMap::BLACK_VALUE(0, 0, 0);
 
 PortablePixMap::PortablePixMap(const std::string& name, const std::string& extention, size_t width, size_t height,
-	const std::vector<std::vector<rgb>>& pixels, size_t MaxValue)
+	const std::vector<std::vector<rgb>>& pixels, size_t maxValue)
 	: Image(name, extention, width, height) {
 	try {
 		setPixels(pixels);
@@ -39,7 +39,7 @@ void PortablePixMap::printInfo() const {
 }
 
 std::string PortablePixMap::getInfo() const {
-	std::string result = name + '\n' + std::to_string(width) + '\n' + std::to_string(height) + '\n';
+	std::string result = extensionType + '\n' + std::to_string(width) + '\n' + std::to_string(height) + '\n' + std::to_string(maxValue) + '\n';
 
 	for (size_t i = 0; i < height; i++) {
 		for (size_t j = 0; j < width; j++) {

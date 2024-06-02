@@ -6,7 +6,7 @@
 class Editor {
 private:
 	Editor() = default;
-	~Editor() = default;
+	~Editor();
 
 public:
 	Editor(const Editor&) = delete;
@@ -15,9 +15,8 @@ public:
 	static Editor& getInstance();
 	void run();
 	void printHelp() const;
-	void executeCommand(const std::string& command);
 
 private:
-	std::vector<Session> sessions;
+	std::vector<Session*> sessions;
 	std::vector<std::string> loadedImages;
 };

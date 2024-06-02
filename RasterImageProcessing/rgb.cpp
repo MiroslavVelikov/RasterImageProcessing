@@ -47,3 +47,7 @@ unsigned short rgb::getBlue() const {
 std::string rgb::toString() const {
 	return std::to_string(red) + ' ' + std::to_string(green) + ' ' + std::to_string(blue);
 }
+
+bool operator<(const rgb& color, size_t value) {
+	return (color.red + color.green + color.blue) / 3 < value;
+}

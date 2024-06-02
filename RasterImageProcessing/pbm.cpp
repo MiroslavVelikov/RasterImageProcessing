@@ -18,7 +18,7 @@ void PortableBitMap::printInfo() const {
 }
 
 std::string PortableBitMap::getInfo() const {
-	std::string result = name + '\n' + std::to_string(width) + '\n' + std::to_string(height) + '\n';
+	std::string result = extensionType + '\n' + std::to_string(width) + '\n' + std::to_string(height) + '\n';
 
 	for (size_t i = 0; i < height; i++) {
 		for (size_t j = 0; j < width; j++) {

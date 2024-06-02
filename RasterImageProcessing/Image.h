@@ -20,6 +20,7 @@ public:
 	const std::string& getType() const { return extensionType; };
 
 	virtual void* getPixels() = 0;
+	virtual size_t maxValueColor() const = 0;
 
 	size_t getWidth() const;
 	size_t getHeight() const;

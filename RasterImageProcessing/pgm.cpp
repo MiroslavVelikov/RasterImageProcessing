@@ -37,7 +37,7 @@ void PortableGrayMap::printInfo() const {
 }
 
 std::string PortableGrayMap::getInfo() const {
-	std::string result = name + '\n' + std::to_string(width) + '\n' + std::to_string(height) + '\n';
+	std::string result = extensionType + '\n' + std::to_string(width) + '\n' + std::to_string(height) + '\n' + std::to_string(maxValue) + '\n';
 
 	for (size_t i = 0; i < height; i++) {
 		for (size_t j = 0; j < width; j++) {
